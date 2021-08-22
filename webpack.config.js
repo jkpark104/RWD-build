@@ -22,33 +22,8 @@ module.exports = {
         'css-loader',
         'postcss-loader',
       ]
-    }, {
-      test: /\.(png|jpe?g|webp|tiff?)/i,
-      use: [
-        "file-loader",
-        {
-          loader: "webpack-sharp-loader",
-          options: {
-            processFunction: (sharp) => sharp.negate(),
-          }
-        }
-      ]
-    }, {
-      test: /\.svg$/,
-      loader: "file-loader"
     }]
   },
-
-  // module: {
-  //   rules: [{
-  //     test: /\.css$/,
-  //     use: [
-  //       'style-loader',
-  //       'css-loader',
-  //       'postcss-loader',
-  //     ]
-  //   }]
-  // },
 
   plugins: [
     new HtmlPlugin({
